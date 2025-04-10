@@ -1,4 +1,4 @@
-/* Reset základního stylu */
+/* Základní nastavení */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Hlavní navigace */
+/* Navigace */
 .main-header {
   background-color: #fff;
   position: sticky;
@@ -30,18 +30,6 @@ body {
   justify-content: space-between;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  max-height: 50px; /* Omezení výšky loga */
-  width: auto;
-  object-fit: contain;
-  margin-right: 1rem;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -56,6 +44,13 @@ body {
 }
 
 .nav-links li a:hover {
+  color: #c97b63; /* barva spojená s kávou */
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #c97b63;
 }
 
@@ -112,7 +107,7 @@ body {
   background-color: #b56e59;
 }
 
-/* Obecné sekce */
+/* Obecné nastavení sekcí */
 .section {
   padding: 3rem 1rem;
   background-color: #fff;
@@ -179,12 +174,13 @@ body {
 /* Fotogalerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
 }
 
 .gallery-item {
+  position: relative;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -192,8 +188,13 @@ body {
 
 .gallery-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 /* Kontakt */
@@ -202,16 +203,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Patička */
-.main-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* Animace pro scroll */
+/* Animace fade-in při skrolování */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -223,14 +215,25 @@ body {
   transform: translateY(0);
 }
 
-/* Responzivní styly */
+/* Patička */
+.main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responzivita */
 @media screen and (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
   }
+
   .nav-links {
-    display: none; /* Pro jednoduchost – můžeš implementovat hamburger menu */
+    display: none; /* Tady můžeš přidat hamburger menu, pokud chceš */
   }
+
   .menu-section .menu-items {
     flex-direction: column;
     align-items: center;
