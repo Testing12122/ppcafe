@@ -1,1 +1,130 @@
-STRÁNKA SE PŘIPRAVUJE.
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Moderní kavárna ppcafe - skvělá káva, dorty a stylové posezení.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ppcafe</title>
+  <!-- Odkaz na externí CSS soubor -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts (např. pro moderní font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body>
+
+  <!-- Hlavní navigace -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">ppcafe</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#o-nas">O nás</a></li>
+        <li><a href="#nabidka">Nabídka</a></li>
+        <li><a href="#fotogalerie">Fotogalerie</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero sekce s velkým pozadím -->
+  <section 
+    class="hero"
+    style="background-image: url('images/20250402_124856.jpg');"
+  >
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Vítejte v ppcafe</h1>
+      <p>Moderní kavárna s tou nejlepší kávou ve městě</p>
+      <a href="#nabidka" class="hero-button">Objevte naši nabídku</a>
+    </div>
+  </section>
+
+  <!-- Sekce O nás -->
+  <section id="o-nas" class="section about-section fade-in">
+    <div class="section-content">
+      <h2>O nás</h2>
+      <p>
+        V ppcafe klademe důraz na kvalitní kávu, domácí dorty a přátelskou atmosféru.
+        Naše kavárna je místem, kde se můžete potkat s přáteli, pracovat nebo si
+        odpočinout u šálku čerstvě pražené kávy. Přijďte se přesvědčit sami!
+      </p>
+    </div>
+  </section>
+
+  <!-- Sekce Nabídka -->
+  <section id="nabidka" class="section menu-section fade-in">
+    <div class="section-content">
+      <h2>Naše nabídka</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="images/20250402_130639.jpg" alt="Lahodná káva">
+          <h3>Kávy</h3>
+          <p>Espresso, Cappuccino, Latte, Flat White a další</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/IMG-20250406-WA0009.jpg" alt="Dort a zákusky">
+          <h3>Dorty a zákusky</h3>
+          <p>Čerstvé domácí dorty, dortíky, croissanty i makronky</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/IMG-20250406-WA0013.jpg" alt="Čerstvé pečivo">
+          <h3>Pečivo</h3>
+          <p>Chlebíčky, quiche, panini a další slané dobroty</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekce Fotogalerie -->
+  <section id="fotogalerie" class="section gallery-section fade-in">
+    <div class="section-content">
+      <h2>Fotogalerie</h2>
+      <div class="gallery">
+        <!-- Tady můžeš přidat více fotek dle potřeby -->
+        <div class="gallery-item">
+          <img src="images/IMG-20250406-WA0014.jpg" alt="Interiér kavárny">
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG-20250406-WA0017.jpg" alt="Barista při práci">
+        </div>
+        <div class="gallery-item">
+          <img src="images/20250403_190313.jpg" alt="Káva a latte art">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekce Kontakt -->
+  <section id="kontakt" class="section contact-section fade-in">
+    <div class="section-content">
+      <h2>Kontakt</h2>
+      <p>
+        Najdete nás v centru města, kousek od hlavního náměstí.
+        <br>
+        Adresa: Kavárenská 123, 110 00, Praha
+      </p>
+      <p>
+        Otevírací doba: Po - Ne: 8:00 - 20:00
+      </p>
+      <p>
+        <strong>Telefon:</strong> +420 123 456 789 <br>
+        <strong>E-mail:</strong> info@ppcafe.cz
+      </p>
+    </div>
+  </section>
+
+  <!-- Paticka webu -->
+  <footer class="main-footer">
+    <p>&copy; 2025 ppcafe. Všechna práva vyhrazena.</p>
+  </footer>
+
+  <!-- Odkaz na externí JS soubor -->
+  <script src="script.js"></script>
+</body>
+</html>
