@@ -6,30 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>P&Pcafe</title>
 
-  <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Odkaz na externí CSS soubor -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Google Fonts (např. pro moderní font) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
     rel="stylesheet"
   >
 </head>
 <body>
 
-  <!-- Hlavní navigace -->
   <header class="main-header">
     <nav class="navbar">
       <div class="logo">
         <a href="#">P&Pcafe</a>
       </div>
       <ul class="nav-links">
-        <li><a href="#o-nas">O nás</a></li>
+        <li><a href="#o-nas">O nás <span id="status"></span></a></li>
         <li><a href="#nabidka">Nabídka</a></li>
         <li><a href="#fotogalerie">Fotogalerie</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
@@ -38,8 +34,7 @@
     </nav>
   </header>
 
-  <!-- Hero sekce s velkým pozadím -->
-  <section 
+  <section
     class="hero"
     style="background-image: url('images/20250402_124856.jpg');"
   >
@@ -51,10 +46,9 @@
     </div>
   </section>
 
-  <!-- Sekce O nás -->
   <section id="o-nas" class="section about-section fade-in">
     <div class="section-content">
-      <h2>O nás</h2>
+      <h2>O nás <span id="about-status"></span></h2>
       <p>
         V P&Pcafe klademe důraz na kvalitní kávu, domácí dorty, nápoje a přátelskou atmosféru.
         Naše kavárna je místem, kde se můžete potkat s přáteli, pracovat nebo si
@@ -63,7 +57,6 @@
     </div>
   </section>
 
-  <!-- Sekce Nabídka -->
   <section id="nabidka" class="section menu-section fade-in">
     <div class="section-content">
       <h2>Naše nabídka</h2>
@@ -87,12 +80,10 @@
     </div>
   </section>
 
-  <!-- Sekce Fotogalerie -->
   <section id="fotogalerie" class="section gallery-section fade-in">
     <div class="section-content">
       <h2>Fotogalerie</h2>
       <div class="gallery">
-        <!-- Do galerie přidáváme všechny zbývající fotky -->
         <div class="gallery-item">
           <img src="images/IMG-20250406-WA0013.jpg" alt="Photo1">
         </div>
@@ -110,7 +101,6 @@
     </div>
   </section>
 
-  <!-- Sekce Kontakt -->
   <section id="kontakt" class="section contact-section fade-in">
     <div class="section-content">
       <h2>Kontakt</h2>
@@ -129,12 +119,41 @@
     </div>
   </section>
 
-  <!-- Paticka webu -->
   <footer class="main-footer">
     <p>&copy; 2025 P&Pcafe. Všechna práva vyhrazena.</p>
   </footer>
 
-  <!-- Odkaz na externí JS soubor -->
-  <script src="script.js"></script>
+  <script>
+    function updateStatus() {
+      const now = new Date();
+      const dayOfWeek = now.getDay(); // 0 = Neděle, 1 = Pondělí, ..., 6 = Sobota
+      const hour = now.getUTCHours() + 2; // Přidáme 2 hodiny pro UTC+2
+
+      let statusText = "";
+
+      if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Pondělí až Pátek
+        if (hour >= 8 && hour < 20) {
+          statusText = "(Otevřeno)";
+        } else {
+          statusText = "(Zavřeno)";
+        }
+      } else if (dayOfWeek === 6 || dayOfWeek === 0) { // Sobota nebo Neděle
+        if (hour >= 9 && hour < 15.5) { // 15:30 je 15.5
+          statusText = "(Otevřeno)";
+        } else {
+          statusText = "(Zavřeno)";
+        }
+      }
+
+      const statusElements = document.querySelectorAll("#status, #about-status");
+      statusElements.forEach(element => {
+        element.textContent = " " + statusText;
+      });
+    }
+
+    // Aktualizujeme stav při načtení stránky a každých 60 sekund (pro jistotu)
+    updateStatus();
+    setInterval(updateStatus, 60000);
+  </script>
 </body>
 </html>
