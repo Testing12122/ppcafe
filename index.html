@@ -1,159 +1,280 @@
 <!DOCTYPE html>
+
 <html lang="cs">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Moderní kavárna P&Pcafe - skvělá káva, dorty, nápoje a stylové posezení.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>P&Pcafe</title>
 
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
 
-  <link rel="stylesheet" href="styles.css">
+<meta name="description" content="Moderní kavárna P&Pcafe - skvělá káva, dorty, nápoje a stylové posezení.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>P&Pcafe</title>
+
+
+
+<!-- Favicon -->
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
+
+<!-- Odkaz na externí CSS soubor -->
+
+<link rel="stylesheet" href="styles.css">
+
+
+
+<!-- Google Fonts (např. pro moderní font) -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+
+rel="stylesheet"
+
+>
+
 </head>
+
 <body>
 
-  <header class="main-header">
-    <nav class="navbar">
-      <div class="logo">
-        <a href="#">P&Pcafe</a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#o-nas">O nás <span id="status"></span></a></li>
-        <li><a href="#nabidka">Nabídka</a></li>
-        <li><a href="#fotogalerie">Fotogalerie</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-        <li><a href="https://instagram.com/pp_cafe_prague" target="_blank">Instagram</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section
-    class="hero"
-    style="background-image: url('images/20250402_124856.jpg');"
-  >
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Vítejte v P&Pcafe</h1>
-      <p>Moderní kavárna s tou nejlepší kávou ve městě</p>
-      <a href="#nabidka" class="hero-button">Objevte naši nabídku</a>
-    </div>
-  </section>
 
-  <section id="o-nas" class="section about-section fade-in">
-    <div class="section-content">
-      <h2>O nás <span id="about-status"></span></h2>
-      <p>
-        V P&Pcafe klademe důraz na kvalitní kávu, domácí dorty, nápoje a přátelskou atmosféru.
-        Naše kavárna je místem, kde se můžete potkat s přáteli, pracovat nebo si
-        odpočinout u šálku čerstvě pražené kávy. Přijďte se přesvědčit sami!
-      </p>
-    </div>
-  </section>
+<!-- Hlavní navigace -->
 
-  <section id="nabidka" class="section menu-section fade-in">
-    <div class="section-content">
-      <h2>Naše nabídka</h2>
-      <div class="menu-items">
-        <div class="menu-item">
-          <img src="images/Screenshot_20250410_212916_WhatsApp.jpg" alt="Lahodná káva">
-          <h3>Kávy</h3>
-          <p>Espresso, Cappuccino, Latte, Flat White a další</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/20250404_091313.jpg" alt="Dorty a zákusky">
-          <h3>Dorty a zákusky</h3>
-          <p>Čerstvé domácí dorty, dortíky, croissanty a více</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/IMG-20250406-WA0009.jpg" alt="Nápoje">
-          <h3>Nápoje</h3>
-          <p>Káva, čaj, džusy a další osvěžující nápoje</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<header class="main-header">
 
-  <section id="fotogalerie" class="section gallery-section fade-in">
-    <div class="section-content">
-      <h2>Fotogalerie</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="images/IMG-20250406-WA0013.jpg" alt="Photo1">
-        </div>
-        <div class="gallery-item">
-          <img src="images/IMG-20250406-WA0014.jpg" alt="Photo2">
-        </div>
-        <div class="gallery-item">
-          <img src="images/IMG-20250406-WA0017.jpg" alt="Photo3">
-        </div>
-        <div class="gallery-item">
-          <img src="images/IMG-20250406-WA0016.jpg" alt="Photo4">
-        </div>
-      </div>
-      <p class="gallery-caption"></p>
-    </div>
-  </section>
+<nav class="navbar">
 
-  <section id="kontakt" class="section contact-section fade-in">
-    <div class="section-content">
-      <h2>Kontakt</h2>
-      <p>
-        Naše kavárna se nachází naproti Divadlu Járy Cimrmana.
-        <br>
-        Adresa: Štítného 8, Praha 3
-      </p>
-      <p>
-        Otevírací doba: Po - Pa: 8:30 - 20:00 Víkend: 9:00 - 15:30
-      </p>
-      <p>
-        <strong>Telefon:</strong> +420 776 343 008 <br>
-        <strong>E-mail:</strong> kavarnapandp@gmail.com
-      </p>
-    </div>
-  </section>
+<div class="logo">
 
-  <footer class="main-footer">
-    <p>&copy; 2025 P&Pcafe. Všechna práva vyhrazena.</p>
-  </footer>
+<a href="#">P&Pcafe</a>
 
-  <script>
-    function updateStatus() {
-      const now = new Date();
-      const dayOfWeek = now.getDay(); // 0 = Neděle, 1 = Pondělí, ..., 6 = Sobota
-      const hour = now.getUTCHours() + 2; // Přidáme 2 hodiny pro UTC+2
+</div>
 
-      let statusText = "";
+<ul class="nav-links">
+<li><a href="#o-nas">Status: Otevřeno</a></li>
 
-      if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Pondělí až Pátek
-        if (hour >= 8 && hour < 20) {
-          statusText = "(Otevřeno)";
-        } else {
-          statusText = "(Zavřeno)";
-        }
-      } else if (dayOfWeek === 6 || dayOfWeek === 0) { // Sobota nebo Neděle
-        if (hour >= 9 && hour < 15.5) { // 15:30 je 15.5
-          statusText = "(Otevřeno)";
-        } else {
-          statusText = "(Zavřeno)";
-        }
-      }
+<li><a href="#o-nas">O nás</a></li>
 
-      const statusElements = document.querySelectorAll("#status, #about-status");
-      statusElements.forEach(element => {
-        element.textContent = " " + statusText;
-      });
-    }
+<li><a href="#nabidka">Nabídka</a></li>
 
-    // Aktualizujeme stav při načtení stránky a každých 60 sekund (pro jistotu)
-    updateStatus();
-    setInterval(updateStatus, 60000);
-  </script>
+<li><a href="#fotogalerie">Fotogalerie</a></li>
+
+<li><a href="#kontakt">Kontakt</a></li>
+
+<li><a href="https://instagram.com/pp_cafe_prague" target="_blank">Instagram</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- Hero sekce s velkým pozadím -->
+
+<section
+
+class="hero"
+
+style="background-image: url('images/20250402_124856.jpg');"
+
+>
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>Vítejte v P&Pcafe</h1>
+
+<p>Moderní kavárna s tou nejlepší kávou ve městě</p>
+
+<a href="#nabidka" class="hero-button">Objevte naši nabídku</a>
+
+</div>
+
+</section>
+
+
+
+<!-- Sekce O nás -->
+
+<section id="o-nas" class="section about-section fade-in">
+
+<div class="section-content">
+
+<h2>O nás</h2>
+
+<p>
+
+V P&Pcafe klademe důraz na kvalitní kávu, domácí dorty, nápoje a přátelskou atmosféru.
+
+Naše kavárna je místem, kde se můžete potkat s přáteli, pracovat nebo si
+
+odpočinout u šálku čerstvě pražené kávy. Přijďte se přesvědčit sami!
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- Sekce Nabídka -->
+
+<section id="nabidka" class="section menu-section fade-in">
+
+<div class="section-content">
+
+<h2>Naše nabídka</h2>
+
+<div class="menu-items">
+
+<div class="menu-item">
+
+<img src="images/Screenshot_20250410_212916_WhatsApp.jpg" alt="Lahodná káva">
+
+<h3>Kávy</h3>
+
+<p>Espresso, Cappuccino, Latte, Flat White a další</p>
+
+</div>
+
+<div class="menu-item">
+
+<img src="images/20250404_091313.jpg" alt="Dorty a zákusky">
+
+<h3>Dorty a zákusky</h3>
+
+<p>Čerstvé domácí dorty, dortíky, croissanty a více</p>
+
+</div>
+
+<div class="menu-item">
+
+<img src="images/IMG-20250406-WA0009.jpg" alt="Nápoje">
+
+<h3>Nápoje</h3>
+
+<p>Káva, čaj, džusy a další osvěžující nápoje</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Sekce Fotogalerie -->
+
+<section id="fotogalerie" class="section gallery-section fade-in">
+
+<div class="section-content">
+
+<h2>Fotogalerie</h2>
+
+<div class="gallery">
+
+<!-- Do galerie přidáváme všechny zbývající fotky -->
+
+<div class="gallery-item">
+
+<img src="images/IMG-20250406-WA0013.jpg" alt="Photo1">
+
+</div>
+
+<div class="gallery-item">
+
+<img src="images/IMG-20250406-WA0014.jpg" alt="Photo2">
+
+</div>
+
+<div class="gallery-item">
+
+<img src="images/IMG-20250406-WA0017.jpg" alt="Photo3">
+
+</div>
+
+<div class="gallery-item">
+
+<img src="images/IMG-20250406-WA0016.jpg" alt="Photo4">
+
+</div>
+
+</div>
+
+<p class="gallery-caption"></p>
+
+</div>
+
+</section>
+
+
+
+<!-- Sekce Kontakt -->
+
+<section id="kontakt" class="section contact-section fade-in">
+
+<div class="section-content">
+
+<h2>Kontakt</h2>
+
+<p>
+
+Naše kavárna se nachází naproti Divadlu Járy Cimrmana.
+
+<br>
+
+Adresa: Štítného 8, Praha 3
+
+</p>
+
+<p>
+
+Otevírací doba: Po - Pa: 8:30 - 20:00 Víkend: 9:00 - 15:30
+
+</p>
+
+<p>
+
+<strong>Telefon:</strong> +420 776 343 008 <br>
+
+<strong>E-mail:</strong> kavarnapandp@gmail.com
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- Paticka webu -->
+
+<footer class="main-footer">
+
+<p>&copy; 2025 P&Pcafe. Všechna práva vyhrazena.</p>
+
+</footer>
+
+
+
+<!-- Odkaz na externí JS soubor -->
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
